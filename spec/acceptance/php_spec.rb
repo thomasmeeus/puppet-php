@@ -6,11 +6,7 @@ describe 'php' do
     it 'should work with no errors' do
       pp = <<-EOS
 
-        class { 'php':
-          'settings' => {
-            'PHP/short_open_tag' => 'On'
-          }
-        }
+        class { 'php'  }
       EOS
 
       # Run it twice and test for idempotency
