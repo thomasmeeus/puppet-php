@@ -1,11 +1,11 @@
 require 'spec_helper_acceptance'
 
-describe 'apache' do
+describe 'php' do
 
   describe 'running puppet code' do
     it 'should work with no errors' do
       pp = <<-EOS
-        include php 
+        include php::apache
       EOS
 
       # Run it twice and test for idempotency
