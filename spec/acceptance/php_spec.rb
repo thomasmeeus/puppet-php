@@ -11,9 +11,10 @@ describe 'php' do
           package       => 'libapache2-mod-php5',
           inifile       => '/etc/php5/apache2/php.ini',
           settings => {
-            set => 
+            set => {
               'PHP/memory_limit' => '1G'
             }
+          }
         }
       EOS
 
