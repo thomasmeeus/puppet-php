@@ -10,7 +10,7 @@ describe 'php' do
           ensure_status => 'stopped',
           package       => 'libapache2-mod-php5',
           inifile       => '/etc/php5/apache2/php.ini',
-          $settings = {
+          settings => {
             set => 
               'PHP/memory_limit' => '1G',
             }
