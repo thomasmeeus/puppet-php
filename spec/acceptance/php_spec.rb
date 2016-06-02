@@ -7,7 +7,7 @@ describe 'php' do
       pp = <<-EOS
 
         class { 'php':
-          settings => {
+          'settings' => {
             'PHP/short_open_tag' => 'On'
           }
         }
