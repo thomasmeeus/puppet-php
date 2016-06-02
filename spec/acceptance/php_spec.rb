@@ -6,14 +6,9 @@ describe 'php' do
     it 'should work with no errors' do
       pp = <<-EOS
 
-        class php::apache{
-          ensure_status => 'stopped',
-          package       => 'libapache2-mod-php5',
-          inifile       => '/etc/php5/apache2/php.ini',
+        class { 'php':
           settings => {
-            set => {
-              'PHP/memory_limit' => '1G'
-            }
+            'PHP/short_open_tag' => 'On'
           }
         }
       EOS
